@@ -1,0 +1,4 @@
+{
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/(site)/page": "app/(site)/page.js"
+}

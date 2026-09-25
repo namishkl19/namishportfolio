@@ -1,0 +1,24 @@
+'use client';
+
+import { MoonStar, SunMedium } from 'lucide-react';
+import { useTheme } from 'next-themes';
+
+import { Button } from '@/components/ui/button';
+
+export function ThemeToggle() {
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+
+  return (
+    <Button
+      type="button"
+      variant="outline"
+      size="icon"
+      className="icon-button theme-toggle-button"
+      aria-label="Toggle theme"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+    >
+      {isDark ? <SunMedium /> : <MoonStar />}
+    </Button>
+  );
+}
